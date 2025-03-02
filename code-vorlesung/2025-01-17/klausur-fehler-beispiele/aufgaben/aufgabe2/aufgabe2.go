@@ -10,5 +10,12 @@ package aufgabe2
 func FilterVowels(s string) string {
 	result := ""
 	// TODO
+
+	for _, el := range s {
+		if el != 'a' && el != 'e' && el != 'i' && el != 'o' && el != 'u' {
+
+			result += string(el)
+		}
+	}
 	return result
 }

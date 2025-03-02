@@ -15,11 +15,11 @@ func ElementDiffs(l1, l2 []int) []int {
 		return []int{}
 	}
 	if len(l1) == 0 {
-		return append([]int{l2[0]} ElementDiffs(l1, l2[1:])...)
+		return append([]int{l2[0]}, ElementDiffs(l1, l2[1:])...)
 	}
 
 	if len(l2) == 0 {
-		return append([]int{l1[0]} ElementDiffs(l1[1:], l2)...)
+		return append([]int{l1[0]}, ElementDiffs(l1[1:], l2)...)
 	}
 	diff := l1[0] - l2[0]
 	return append([]int{diff}, ElementDiffs(l1[1:], l2[1:])...)

@@ -15,5 +15,29 @@ MAX. PUNKTE: 10
 func SymmetricDifference(l1, l2 []int) []int {
 	result := []int{}
 	// TODO
+	for _, el1 := range l1 {
+		seen := false
+		for _, el2 := range l2 {
+			if el1 == el2 {
+				seen = true
+			}
+		}
+		if !seen {
+			result = append(result, el1)
+		}
+	}
+
+	for _, el2 := range l2 {
+		seen := false
+		for _, el1 := range l1 {
+			if el1 == el2 {
+				seen = true
+			}
+		}
+		if !seen {
+			result = append(result, el2)
+		}
+	}
+
 	return result
 }

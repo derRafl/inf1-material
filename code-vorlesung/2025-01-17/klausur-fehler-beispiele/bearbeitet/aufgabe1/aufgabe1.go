@@ -9,7 +9,7 @@ package aufgabe1
 // D.h. eine Liste mit allen geraden Zahlen vor der ersten ungeraden.
 func EvenPrefix(list []int) []int {
 	result := []int{}
-	for_, num := range list {
+	for _, num := range list {
 		if num%2 == 0 {
 			result = append(result, num)
 		} else {

@@ -10,19 +10,20 @@ package aufgabe2
 func FilterVowels(s string) string {
 	result := ""
 	vowels := "aeiou"
-	for _, char := range s{
-		if !contains(vowels, char){
+	for _, char := range s {
+		if !contains(vowels, char) {
 			result += string(char)
 		}
 	}
 	return result
 
+}
 
-c contains (set string, char rune) bool{
+func contains(set string, char rune) bool {
 	for _, c := range set {
 		if c == char {
 			return true
 		}
 	}
-	return false 
+	return false
 }
